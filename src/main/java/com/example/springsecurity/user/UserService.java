@@ -9,11 +9,11 @@ import java.security.Principal;
 
 @Service
 @RequiredArgsConstructor
-public class UserService {
+public class   UserService {
 
     private final PasswordEncoder passwordEncoder;
     private final UserRepository repository;
-    public void changePassword(ChangPassWordRequest request, Principal connectedUser) {
+    public void changePassword(ChangePasswordRequest request, Principal connectedUser) {
 
         var user = (User) ((UsernamePasswordAuthenticationToken) connectedUser).getPrincipal();
 

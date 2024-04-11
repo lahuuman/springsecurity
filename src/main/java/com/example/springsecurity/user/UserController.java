@@ -18,7 +18,7 @@ public class UserController {
 
     @PatchMapping
     public ResponseEntity<?> changePassword(
-          @RequestBody ChangPassWordRequest request,
+          @RequestBody ChangePasswordRequest request,
           Principal connectedUser
     ) {
         service.changePassword(request, connectedUser);
